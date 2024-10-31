@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOICE - Member Area</title>
+    <style>
+         body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('../VOICE/BP4.jpg') center center / cover no-repeat;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    color: #333;
+}
+        .header {
+            background-color: transparent;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo img {
+            height: 40px;
+        }
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+        .nav a {
+            background-color: transparent;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: bold;
+            font-weight: bolder;
+            padding: 8px 16px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+        .login-link {
+            background-color: transparent;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: bold;
+            font-weight: bolder;
+            padding: 8px 16px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+        .login-link:hover {
+            background-color:transparent ;
+        }
+
+        .member-area {
+            padding: 60px 20px;
+            color: #fff;
+            
+        }
+        .member-area h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .profile-info,
+        .upload-video {
+            background-color: transparent;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .profile-info h3,
+        .upload-video h3 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .profile-info p,
+        .upload-video p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .upload-video form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .upload-video input[type="file"] {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .upload-video button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+        .upload-video button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <a href="#"><img src="logo.jpg" alt="VOICE Logo"></a>
+    </div>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact-us.html">Contact Us</a>
+    </nav>
+    <a href="login.html" class="login-link">Login</a>
+</header>
+
+<section class="member-area">
+    <h2>Member Area</h2>
+
+
+    <div class="upload-video">
+        <h3>Upload a Video</h3>
+        <p>Share your videos with the VOICE community. Ensure your content aligns with our guidelines.</p>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label for="video-title">Video Title</label>
+            <input type="text" id="video-title" name="video-title" required>
+            
+            <label for="video-file">Select Video File</label>
+            <input type="file" id="video-file" name="video-file" accept="video/*" required>
+            
+            <button type="submit">Upload Video</button>
+        </form>
+    </div>
+
+</section>
+
+</body>
+</html>

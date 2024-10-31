@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOICE - Home</title>
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('../VOICE/BP4.jpg') center center / cover no-repeat;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.container {
+    padding: 20px;
+}
+
+.header {
+    background-color: transparent(37, 26, 196, 0.9); /* Semi-transparent */
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    background-color: transparent;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: bold;
+            font-weight: bolder;
+            padding: 8px 16px;
+            border-radius: 7px;
+            text-decoration: none;;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    color: #251ac4;
+}
+
+.login-link {
+            background-color: transparent;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: bold;
+            font-weight: bolder;
+            padding: 8px 16px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+        .login-link:hover {
+            background-color: transparent;
+            text-decoration: underline;
+            color: blue;
+}
+
+
+.hero {
+    background: url('hero-bg.jpg') center / cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.cta-buttons {
+    margin-top: 30px;
+}
+
+.cta-buttons a {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+.cta-buttons a:hover {
+    background-color: #0056b3;
+}
+
+
+.section {
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    color: transparent;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #251ac4;
+}
+
+.section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* Projects & Events */
+.projects-container, .events-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.project, .event {
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project img, .event img {
+    display: block;
+    margin: 0 auto; /* Center image horizontally */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project h3, .event h3 {
+    margin: 10px 0;
+    font-size: 1.8em;
+    color: #007bff;
+}
+
+.project p, .event p {
+    font-size: 1.1em;
+    color: white;
+}
+
+.project a, .event a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover, .event a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #251ac4;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+</style>
+</head>
+<body>
+<a href="about-us.html"></a>
+<header class="header">
+    <div class="logo">
+        <a href="#"><img src="logo.jpg" alt="VOICE Logo"></a>
+    </div>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact-us.html">Contact Us</a>
+    </nav>
+    <a href="login.html" class="login-link">Login</a>
+</header>
+
+<section id="home" class="hero">
+    <h1>Empowering Communities for a Better Future</h1>
+    <p>Championing social justice, promoting mental health, and fostering technology education.</p>
+    <div class="cta-buttons">
+        <a href="donate.html">Donate Now</a>
+    </div>
+</section>
+
+<section id="about-us" class="section">
+    <h2>About Us</h2>
+    <p>Learn more about our mission, vision, and the team driving VOICE forward.</p>
+</section>
+
+<section id="projects" class="section featured-projects">
+    <h2>Featured Projects</h2>
+    <div class="projects-container">
+        <div class="project">
+            <img src="SJ2.jpg" alt="Project 1">
+            <h3>Social Justice</h3>
+            <p>Social justice drives us to create a fair and equitable society by challenging systemic inequalities and advocating for inclusive policies. Our efforts in education and activism lead to meaningful improvements in people’s lives, fostering a world where dignity and equality are realized for everyone.</p>
+            <a href="projects.html">Learn More</a>
+        </div>
+        <div class="project">
+            <img src="MH2.jpg" alt="Project 2">
+            <h3>Mental Health Awareness</h3>
+            <p>Mental health awareness actively promotes understanding and support for mental health challenges, reduces stigma, and encourages open conversations. By educating communities and advocating for accessible resources, we empower individuals to receive the care they need, creating a more supportive and empathetic society.</p>
+            <a href="projects.html">Learn More</a>
+        </div>
+        <div class="project">
+            <img src="TE2.jpg" alt="Project 3">
+            <h3>Technology Education for Underprivileged Kids</h3>
+            <p>Technology education for underprivileged kids opens doors to opportunities by providing access to essential digital skills and resources. Offering hands-on learning and support empowers children to overcome barriers, bridge the digital divide, and unlock their full potential in a technology-driven world.</p>
+            <a href="projects.html">Learn More</a>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    function toggleDescriptionSJ() {
+        var fullDescSJ = document.getElementById("fullDescriptionSJ");
+        var learnMoreLinkSJ = document.querySelector(".project a[href='javascript:void(0);']");
+
+        if (fullDescSJ.style.display === "none") {
+            fullDescSJ.style.display = "block";
+            learnMoreLinkSJ.textContent = "Show Less";
+        } else {
+            fullDescSJ.style.display = "none";
+            learnMoreLinkSJ.textContent = "Learn More";
+        }
+    }
+
+    function toggleDescriptionMH() {
+        var fullDescMH = document.getElementById("fullDescriptionMH");
+        var learnMoreLinkMH = document.querySelector(".project a[href='javascript:void(0);']");
+
+        if (fullDescMH.style.display === "none") {
+            fullDescMH.style.display = "block";
+            learnMoreLinkMH.textContent = "Show Less";
+        } else {
+            fullDescMH.style.display = "none";
+            learnMoreLinkMH.textContent = "Learn More";
+        }
+    }
+
+    function toggleDescriptionTE() {
+        var fullDescTE = document.getElementById("fullDescriptionTE");
+        var learnMoreLinkTE = document.querySelector(".project a[href='javascript:void(0);']");
+
+        if (fullDescTE.style.display === "none") {
+            fullDescTE.style.display = "block";
+            learnMoreLinkTE.textContent = "Show Less";
+        } else {
+            fullDescTE.style.display = "none";
+            learnMoreLinkTE.textContent = "Learn More";
+        }
+    }
+</script>
+
+
+<section id="get-involved" class="section">
+    <h2>Get Involved</h2>
+    <p>Find out how you can contribute to our mission through volunteering, donations, and more.</p>
+</section>
+<section id="contact-us" class="section">
+    <h2>Contact Us</h2>
+    <p>Get in touch with us for any inquiries or support.</p>
+</section>
+
+</body>
+</html>

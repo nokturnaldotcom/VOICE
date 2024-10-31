@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOICE - Projects</title>
+   <style> 
+    body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('../VOICE/BP4.jpg') center center / cover no-repeat;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.container {
+    padding: 20px;
+}
+
+.header {
+    background-color: transparent(37, 26, 196, 0.9); /* Semi-transparent */
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+    .logo img {
+        height: 40px;
+    }
+    .nav {
+        display: flex;
+        gap: 20px;
+    }
+    .nav a {
+        background-color: transparent;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: bold;
+            font-weight: bolder;
+            padding: 8px 16px;
+            border-radius: 7px;
+            text-decoration: none;
+    }
+    .nav a:hover {
+        text-decoration: underline;
+        color: blue;
+    }
+    .login-link {
+            background-color: transparent;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: bold;
+            font-weight: bolder;
+            padding: 8px 16px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+        .login-link:hover {
+            background-color: transparent;
+            text-decoration: underline;
+            color: blue;
+    }
+    .hero {
+    background: url('hero-bg.jpg') center / cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    position: relative;
+}
+    .projects-section {
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+    }
+    .projects-section h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+    .projects {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .project {
+        background-color: transparent;
+        border-radius: 8px;
+        padding: 20px;
+        width: 30%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .project img {
+        width: 100%;
+        border-radius: 8px;
+    }
+    .project h3 {
+        font-size: 1.8em;
+        margin: 15px 0;
+    }
+    .project p {
+        font-size: 1.1em;
+        margin-bottom: 15px;
+    }
+    .project a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .project a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <a href="#"><img src="logo.jpg" alt="VOICE Logo"></a>
+    </div>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact-us.html">Contact Us</a>
+    </nav>
+    <a href="login.html" class="login-link">Login</a>
+</header>
+
+<section id="projects" class="projects-section">
+    <h2>Our Projects</h2>
+    <div class="projects">
+        <div class="project">
+            <img src="PJ1.jpg" alt="Project 1">
+            <h3>Mental Health App</h3>
+            <p>
+                <strong>Brief Description:</strong> 
+                This project will focus on developing a user-friendly mobile app designed to support the mental well-being of teenagers. The app will offer resources such as daily affirmations, mindfulness exercises, mood tracking, and access to mental health articles.
+            </p>
+            <div id="fullDescription" style="display: none;">
+                <strong>Goals:</strong>
+                <ul>
+                    <li>Promote mental well-being: Encourage teens to prioritize their mental health by using the app’s daily check-ins, self-care routines, and mindfulness practices.</li>
+                    <li>Increase awareness: Provide educational resources on common mental health issues such as anxiety, depression, and stress, ensuring accessible information.</li>
+                    <li>Create a supportive community: Foster a safe online space for teens to share their thoughts, challenges, and victories, reducing the stigma around discussing mental health.</li>
+                    <li>Encourage help-seeking behavior: Offer resources and contact information for professional mental health services, promoting early intervention when needed.</li>
+                </ul>
+                
+                <strong>Achievements:</strong>
+                <ul>
+                    <li>The app will be successfully developed and launched, aiming to reach over 1,000 downloads within the first three months.</li>
+                    <li>We will partner with mental health professionals to create content, ensuring that the advice and resources are grounded in evidence-based practices.</li>
+                    <li>Mood tracking features will be integrated, allowing users to monitor their mental health over time and providing insights into their emotional patterns.</li>
+                    <li>A moderated online community will be established where teens can interact safely, with the goal of having over 300 active users contributing regularly to discussions.</li>
+                </ul>
+                
+                <strong>Impact:</strong>
+                <ul>
+                    <li>Increased access to mental health resources for teens who may not have easy access in their local communities or schools.</li>
+                    <li>Empowerment through self-care routines will allow users to feel more in control of their mental well-being, leading to improved emotional management.</li>
+                    <li>A community-building effort will help create an active, safe, and supportive forum for teens.</li>
+                    <li>Feedback from users will encourage positive mental health practices such as regular mindfulness and journaling.</li>
+                </ul>
+            </div>
+            <a href="javascript:void(0);" onclick="toggleDescription()">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<script>
+    function toggleDescription() {
+        var fullDesc = document.getElementById("fullDescription");
+        var learnMoreLink = document.querySelector(".project a");
+
+        if (fullDesc.style.display === "none") {
+            fullDesc.style.display = "block";
+            learnMoreLink.textContent = "Show Less";
+        } else {
+            fullDesc.style.display = "none";
+            learnMoreLink.textContent = "Learn More";
+        }
+    }
+</script>
+
+
+<section id="projects" class="projects-section">
+    <div class="projects">
+        <div class="project">
+            <img src="PJ2.jpg" alt="Project 2">
+            <h3>Virtual Storytelling Platform</h3>
+            <p>
+                <strong>Brief Description:</strong>
+                This project will focus on developing an interactive virtual storytelling platform where users will be able to share their personal stories, listen to others, and engage in meaningful conversations. The platform will allow for video, audio, and text-based storytelling, providing users with different formats to express their experiences.
+            </p>
+            <div id="fullDescription2" style="display: none;">
+                <strong>Goals:</strong>
+                <ul>
+                    <li>Promote empathy and understanding: Encourage users to share their stories and listen to others in a supportive environment, fostering mutual respect and compassion.</li>
+                    <li>Create a diverse storytelling community: Bring together individuals from different backgrounds, cultures, and experiences, ensuring a wide range of perspectives are represented.</li>
+                    <li>Empower voices: Provide a platform where underrepresented voices can be heard, offering them a chance to share their experiences and be validated.</li>
+                    <li>Enhance engagement: Integrate interactive features such as live Q&A sessions, collaborative storytelling events, and story feedback to increase user interaction.</li>
+                </ul>
+
+                <strong>Achievements:</strong>
+                <ul>
+                    <li>The platform will be successfully developed and launched, with over 500 active users expected within the first few months.</li>
+                    <li>Collaborations will be established with writers, artists, and performers to create workshops, helping users improve their storytelling skills.</li>
+                    <li>A wide range of storytelling formats, including audio, video, and text, will be integrated to cater to different storytelling preferences.</li>
+                    <li>Regular virtual storytelling events will be held, providing a stage for individuals to share their stories with a live audience.</li>
+                </ul>
+
+                <strong>Impact:</strong>
+                <ul>
+                    <li>The platform will create an inclusive and diverse space for storytelling, giving individuals the opportunity to express themselves and connect with others.</li>
+                    <li>Users will feel empowered to share their personal stories, knowing that their voices matter and will be heard.</li>
+                    <li>Feedback from users will indicate a sense of connection and community, helping to reduce feelings of isolation by sharing experiences with others.</li>
+                    <li>Interactive features will encourage deeper engagement and foster an active, supportive storytelling community.</li>
+                </ul>
+            </div>
+            <a href="javascript:void(0);" onclick="toggleDescription2()">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<script>
+    function toggleDescription2() {
+        var fullDesc2 = document.getElementById("fullDescription2");
+        var learnMoreLink2 = document.querySelector(".project a");
+
+        if (fullDesc2.style.display === "none") {
+            fullDesc2.style.display = "block";
+            learnMoreLink2.textContent = "Show Less";
+        } else {
+            fullDesc2.style.display = "none";
+            learnMoreLink2.textContent = "Learn More";
+        }
+    }
+</script>
+
+<section id="projects" class="projects-section">
+    <div class="projects">
+        <div class="project">
+            <img src="PJ3.jpg" alt="Project 3">
+            <h3>Social Justice Podcasts</h3>
+            <p>
+                <strong>Brief Description:</strong>
+                This project will focus on creating a series of podcasts that explore social justice issues, providing a platform for underrepresented voices. The podcasts will cover topics such as racial inequality, gender rights, environmental justice, and more, inviting experts and activists to share insights and engage in important discussions.
+            </p>
+            <div id="fullDescription3" style="display: none;">
+                <strong>Goals:</strong>
+                <ul>
+                    <li>Raise awareness: Educate listeners on various social justice issues, ensuring they have access to accurate, in-depth information on pressing global and local matters.</li>
+                    <li>Amplify marginalized voices: Provide a platform for people from underrepresented communities to share their stories, struggles, and perspectives.</li>
+                    <li>Inspire action: Encourage listeners to take meaningful action in their communities by providing them with resources, opportunities, and ways to contribute to social justice efforts.</li>
+                    <li>Build a global audience: Reach listeners from diverse backgrounds and cultures to foster a worldwide dialogue on social justice issues.</li>
+                </ul>
+
+                <strong>Achievements:</strong>
+                <ul>
+                    <li>The podcasts will be successfully launched and expected to reach over 5,000 listeners within the first year.</li>
+                    <li>Collaborations will be established with social justice organizations, allowing for co-hosted episodes and expert contributions to the content.</li>
+                    <li>Listeners will be able to submit their own questions and topics, fostering engagement and ensuring the podcasts address relevant issues.</li>
+                    <li>A series of live podcast recordings will be held, encouraging real-time listener participation and engagement.</li>
+                </ul>
+
+                <strong>Impact:</strong>
+                <ul>
+                    <li>The podcasts will increase public awareness of social justice issues, giving listeners a deeper understanding of topics that affect marginalized communities.</li>
+                    <li>Feedback will indicate that listeners feel empowered to speak out on social issues and take action in their own communities.</li>
+                    <li>The podcast series will foster a global community of listeners passionate about equality, justice, and systemic change.</li>
+                    <li>The platform will inspire listeners to learn more and participate in advocacy work, contributing to long-term social impact.</li>
+                </ul>
+            </div>
+            <a href="javascript:void(0);" onclick="toggleDescription3()">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<script>
+    function toggleDescription3() {
+        var fullDesc3 = document.getElementById("fullDescription3");
+        var learnMoreLink3 = document.querySelector(".project a");
+
+        if (fullDesc3.style.display === "none") {
+            fullDesc3.style.display = "block";
+            learnMoreLink3.textContent = "Show Less";
+        } else {
+            fullDesc3.style.display = "none";
+            learnMoreLink3.textContent = "Learn More";
+        }
+    }
+</script>
+<section id="projects" class="projects-section">
+    <div class="projects">
+        <div class="project">
+            <img src="PJ4.jpg" alt="Project 4">
+            <h3>Tech Workshops for Underprivileged Kids</h3>
+            <p>
+                <strong>Brief Description:</strong>
+                This project will aim to conduct free tech workshops designed for kids underprivileged communities. These workshops will focus on basic computer skills, coding, and digital literacy, providing participants with essential tools to thrive in an increasingly digital world.
+            </p>
+            <div id="fullDescription4" style="display: none;">
+                <strong>Goals:</strong>
+                <ul>
+                    <li>Bridge the digital divide: Equip participants with foundational tech skills that will enable them to pursue educational and career opportunities in the digital realm.</li>
+                    <li>Empower communities: Foster self-sufficiency by teaching practical skills like computer operation, coding, and web development.</li>
+                    <li>Encourage innovation: Inspire participants to think creatively and use technology as a tool for problem-solving within their communities.</li>
+                    <li>Promote inclusivity: Ensure that tech education is accessible to everyone, regardless of their economic background.</li>
+                </ul>
+
+                <strong>Achievements:</strong>
+                <ul>
+                    <li>The workshops will be successfully conducted, reaching over 200 participants in the first year across various underprivileged communities.</li>
+                    <li>Participants will gain certifications in basic digital skills, boosting their employability and confidence in navigating the digital world.</li>
+                    <li>Partnerships will be established with local tech organizations to provide advanced mentorship opportunities for the most promising participants.</li>
+                    <li>A follow-up program will be developed to offer continued tech education and support, ensuring that participants can build on what they learn.</li>
+                </ul>
+
+                <strong>Impact:</strong>
+                <ul>
+                    <li>The project will help close the digital divide, allowing participants from underprivileged backgrounds to access the same opportunities as their peers in more affluent areas.</li>
+                    <li>Feedback will show that participants feel more confident in their tech abilities and are actively using their new skills in education, entrepreneurship, and job applications.</li>
+                    <li>The workshops will inspire a new generation of tech-savvy individuals who are eager to use technology to create positive changes in their communities.</li>
+                    <li>The project will lay the groundwork for a sustainable, community-driven approach to tech education in underprivileged areas.</li>
+                </ul>
+            </div>
+            <a href="javascript:void(0);" onclick="toggleDescription4()">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<script>
+    function toggleDescription4() {
+        var fullDesc4 = document.getElementById("fullDescription4");
+        var learnMoreLink4 = document.querySelector(".project a");
+
+        if (fullDesc4.style.display === "none") {
+            fullDesc4.style.display = "block";
+            learnMoreLink4.textContent = "Show Less";
+        } else {
+            fullDesc4.style.display = "none";
+            learnMoreLink4.textContent = "Learn More";
+        }
+    }
+</script>
+
+</section>
+
+</body>
+</html>

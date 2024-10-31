@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOICE - Login & Upload Video</title>
+  <style>
+    .loading { display: none; }
+    .error { color: red; }
+    .success { color: green; }
+  </style>
+</head>
+<body>
+  <h1>Login</h1>
+  <div id="login-message" class="error"></div>
+  <form id="login-form">
+    <input type="text" id="username" placeholder="Username" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+  </form>
+  <div class="loading" id="login-loading">Logging in...</div>
+
+  <h1>Upload Video</h1>
+  <div id="upload-message" class="error"></div>
+  <form id="video-form" enctype="multipart/form-data">
+    <input type="file" id="video" accept="video/*" required>
+    <button type="submit">Upload Video</button>
+  </form>
+  <div class="loading" id="upload-loading">Uploading video...</div>
+
+  <script>
+    let token = '';
+
+    const showLoading = (id) => {
+      document.getElementById(id).style.display = 'block';
+    };
+
+    const hideLoading = (id) => {
+      document.getElementById(id).style.display = 'none';
+    };
+
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      showLoading('login-loading');
+      document.getElementById('login-message').innerHTML = '';
+
+      try {
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password })
+        });
+
+        const data = await res.json();
+        hideLoading('login-loading');
+
+        if (res.ok) {
+          token = data.token;
+          alert('Login successful');
+        } else {
+          document.getElementById('login-message').innerHTML = data.message || 'Login failed';
+        }
+      } catch (error) {
+        hideLoading('login-loading');
+        document.getElementById('login-message').innerHTML = 'Error: ' + error.message;
+      }
+    });
+
+    document.getElementById('video-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const video = document.getElementById('video').files[0];
+      if (!video) {
+        document.getElementById('upload-message').innerHTML = 'Please select a video file.';
+        return;
+      }
+      const formData = new FormData();
+      formData.append('video', video);
+
+      showLoading('upload-loading');
+      document.getElementById('upload-message').innerHTML = '';
+
+      try {
+        const res = await fetch('/api/groups/upload', {
+          method: 'POST',
+          headers: { 'Authorization': `Bearer ${token}` },
+          body: formData
+        });
+
+        const data = await res.json();
+        hideLoading('upload-loading');
+
+        if (res.ok) {
+          document.getElementById('upload-message').className = 'success';
+          document.getElementById('upload-message').innerHTML = 'Video uploaded successfully!';
+        } else {
+          document.getElementById('upload-message').innerHTML = data.message || 'Upload failed';
+        }
+      } catch (error) {
+        hideLoading('upload-loading');
+        document.getElementById('upload-message').innerHTML = 'Error: ' + error.message;
+      }
+    });
+  </script>
+</body>
+</html>
